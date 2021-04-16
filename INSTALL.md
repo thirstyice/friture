@@ -129,6 +129,65 @@ python setup.py build_ext --inplace
 python main.py
 ```
 
+## Running Friture from source on macOS
+
+The following steps can be used to prepare a development environment for Friture on macOS.
+
+1. Clone this repo
+
+2. Install *Homebrew* - More info https://brew.sh/
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+3. Install python 3.9
+
+```
+brew install python@3.9
+```
+
+4. Make sure pip is up-to-date:
+
+```
+python3 -m pip install --upgrade pip
+```
+
+5. Install virtualenv:
+
+```
+pip3 install -U virtualenv
+```
+
+6. Build a virtualenv:
+
+```
+virtualenv buildenv
+```
+
+7. Activate the virtualenv
+
+```
+source buildenv/bin/activate
+```
+
+8. Install dependencies
+
+```
+pip3 install -r requirements.txt
+```
+
+9. Build Cython extensions
+
+```
+python3 setup.py build_ext --inplace
+```
+
+10. Run Friture
+
+```
+python3 main.py
+```
+
 ## Dependencies
 
 See [requirements.txt](requirements.txt)
